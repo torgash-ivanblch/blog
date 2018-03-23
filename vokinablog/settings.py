@@ -25,7 +25,7 @@ SECRET_KEY = '0@q_c+4r+@u($w$h5pksjud%2qmn#-!hyxdbaqoc%-zvx2f1+c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['138.197.182.28', '.vokina.tk',]
+ALLOWED_HOSTS = ['localhost', '138.197.182.28', '.vokina.tk',]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
