@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'vokina_django_db',
         'USER' : 'torgash',
         'PASSWORD' : 'aA1161510',
-        'HOST' : '127.0.0.1',
+        'HOST' : 'localhost',
         'PORT' : '5432',
     }
 }
