@@ -1,0 +1,6 @@
+Django==2.0.3
+django-taggit==0.22.2
+Markdown==2.6.11
+Pillow==5.0.0
+psycopg2==2.7.4
+pytz==2018.3
