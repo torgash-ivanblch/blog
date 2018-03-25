@@ -90,3 +90,7 @@ input[type=submit] {
     font-size:12px;
     color:#666;
 }
+img{
+    max-width:450px;
+    max-height:450px;
+}

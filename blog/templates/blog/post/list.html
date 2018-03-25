@@ -1,6 +1,7 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
 
+
 {% block title %}VOKINA blog{% endblock %}
 {% block content %}
 <h1>VOKINA</h1>
@@ -19,8 +20,7 @@
   Теги:
   {% for tag in post.tags.all %}
   <a href="{% url "blog:post_list_by_tag" tag.slug %}">
-    {{ tag.name }}
-  </a>
+    {{ tag.name }}</a>
   {% if not forloop.last %}, {% endif %}
   {% endfor %}
 </p>
@@ -29,6 +29,8 @@
 <p class="date">
   Опубликовано {{ post.publish }} автором {{ post.author }}
 </p>
+
+
 {{ post.body|markdown|truncatewords_html:30 }}
 {% endfor %}
 {% include "pagination.html" with page=posts %}

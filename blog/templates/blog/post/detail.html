@@ -1,5 +1,8 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
+{% load staticfiles %}
+
+
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -16,6 +19,11 @@
   </a>
   {% if not forloop.last %}, {% endif %}
   {% endfor %}
+
+
+</p>
+<p>
+<img src="{{post.pic.url}}"/>
 </p>
 {{ post.body|markdown }}
 <p>
