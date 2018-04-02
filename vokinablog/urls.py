@@ -19,12 +19,14 @@ from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap
 from django.conf import settings
 from django.conf.urls.static import static
-
+from django.contrib.auth import views as auth_views
 sitemaps = {
     'posts': PostSitemap,
 }
 
 urlpatterns = [
+    re_path(r'accounts/login/$', auth_views.login, name='login'),
+    re_path(r'accounts/logout/$', auth_views.logout, name='logout'),
     path('admin/', admin.site.urls),
     re_path(r'^blog/', include(('blog.urls', 'blog'), namespace='blog')),
     re_path(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},

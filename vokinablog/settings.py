@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'blog',
     'taggit',
+    'courses',
 ]
 
 MIDDLEWARE = [
